@@ -29,12 +29,12 @@ Available states
 .. contents::
     :local:
 
-``mounts``
-~~~~~~~~~~
+``file.mounts``
+~~~~~~~~~~~~~~~
 Manage mounts
 
-``quota``
-~~~~~~~~~~
+``file.quota``
+~~~~~~~~~~~~~~
 Manage quota
 
 Additional resources

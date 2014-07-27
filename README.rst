@@ -12,8 +12,7 @@ NOTICE BEFORE YOU USE
 TODO
 ----
 
-* manage fstab/ mounts
-* enable/ disable quota for given file systems
+None
 
 Instructions
 ------------
@@ -30,9 +29,13 @@ Available states
 .. contents::
     :local:
 
+``mounts``
+~~~~~~~~~~
+Manage mounts
+
 ``quota``
 ~~~~~~~~~~
-Describe what this state does.
+Manage quota
 
 Additional resources
 --------------------

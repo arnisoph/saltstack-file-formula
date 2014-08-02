@@ -3,4 +3,5 @@ Debian:
   quota:
     pkgs:
       - quota
+  mounts: {}
 {% endload %}

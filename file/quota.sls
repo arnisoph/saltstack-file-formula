@@ -3,6 +3,9 @@
 {% from "file/defaults.yaml" import rawmap with context %}
 {% set datamap = salt['grains.filter_by'](rawmap, merge=salt['pillar.get']('file:lookup')) %}
 
+include: {{ datamap.quota.sls_include|default([]) }}
+extend: {{ datamap.quota.sls_extend|default({}) }}
+
 quota:
   pkg:
     - installed

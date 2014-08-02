@@ -3,6 +3,9 @@
 {% from "file/defaults.yaml" import rawmap with context %}
 {% set datamap = salt['grains.filter_by'](rawmap, merge=salt['pillar.get']('file:lookup')) %}
 
+include: {{ datamap.mounts.sls_include|default([]) }}
+extend: {{ datamap.mounts.sls_extend|default({}) }}
+
 {%- macro set_p(paramname, dictvar) -%}
   {%- if paramname in dictvar -%}
 - {{ paramname }}: {{ dictvar[paramname] }}

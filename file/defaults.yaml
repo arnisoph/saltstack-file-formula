@@ -4,4 +4,9 @@ Debian:
     pkgs:
       - quota
   mounts: {}
+RedHat:
+  quota:
+    pkgs:
+      - quota
+  mounts: {}
 {% endload %}

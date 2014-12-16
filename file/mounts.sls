@@ -21,4 +21,7 @@ mount_{{ k }}:
   {% for o in ['device', 'fstype', 'mkmnt', 'opts', 'dump', 'pass_num', 'config', 'persist', 'mount'] %}
     {{ set_p(o, v) }}
   {% endfor %}
+  {% if 'device' not in v %}
+    - device: {{ salt['mount.fstab']()[v.path].device }}
+  {% endif %}
 {% endfor %}

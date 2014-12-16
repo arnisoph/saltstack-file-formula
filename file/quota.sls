@@ -12,7 +12,8 @@ quota:
     - pkgs: {{ datamap.quota.pkgs }}
 
 {% for k, v in salt['pillar.get']('file:quota', {})|dictsort %}
-  {% if v.quotacheck|default(True) and salt['quota.get_mode'](v.device)[v.path][v.type] == 'off' %}
+  {% set device = v.device|default(salt['mount.fstab']()[v.path].device) %}
+  {% if v.quotacheck|default(True) and salt['quota.get_mode'](device)[v.path][v.type] == 'off' %}
 quotacheck:
   cmd:
     - run

@@ -13,7 +13,7 @@ extend: {{ datamap.mounts.sls_extend|default({}) }}
 {%- endmacro -%}
 
 {% set mounts = salt['pillar.get']('file:mounts', {}) %}
-{% for k, v in mounts.items() %}
+{% for k, v in mounts|dictsort %}
 mount_{{ k }}:
   mount:
     - {{ v.ensure|default('mounted') }}

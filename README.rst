@@ -71,6 +71,7 @@ Authors
 -------
 
 * Arnold Bechtoldt <mail@arnoldbechtoldt.com>
+* Sander Klein <github@roedie.nl>
 
 
 Miscellaneous

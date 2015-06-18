@@ -29,3 +29,7 @@ file:
     root_without_device:
       path: /var/chroot
       type: group
+  symlink:
+    somedir:
+      name: /path/where/symlink/should/be
+      target: /target/path

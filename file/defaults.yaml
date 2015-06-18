@@ -4,9 +4,11 @@ Debian:
     pkgs:
       - quota
   mounts: {}
+  symlink: {}
 RedHat:
   quota:
     pkgs:
       - quota
   mounts: {}
+  symlink: {}
 {% endload %}
